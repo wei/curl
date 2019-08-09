@@ -12,24 +12,37 @@ Wraps the curl CLI to be used in Github Actions. See also [Github Action for wge
 
 ### Github Actions
 ```
-action "curl" {
-  uses = "wei/curl@master"
-  args = "https://httpbin.org/get"
-}
+on: push
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@master
+      args: https://httpbin.org/get
 ```
 
 ```
-action "curl" {
-  uses = "wei/curl@master"
-  args = "-X POST https://httpbin.org/post"
-}
+on: push
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@master
+      args: -X POST https://httpbin.org/post
 ```
 
 ```
-action "curl" {
-  uses = "wei/curl@master"
-  args = "--upload-file .github/main.workflow https://transfer.sh/main.workflow"
-}
+on: push
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: curl
+      uses: wei/curl@master
+      args: --upload-file .github/workflows/main.yml https://transfer.sh/main-workflow.yml
 ```
 
 ### Docker
