@@ -19,7 +19,8 @@ jobs:
     steps:
     - name: curl
       uses: wei/curl@master
-      args: https://httpbin.org/get
+      with:
+        args: https://httpbin.org/get
 ```
 
 ```
@@ -30,7 +31,8 @@ jobs:
     steps:
     - name: curl
       uses: wei/curl@master
-      args: -X POST https://httpbin.org/post
+      with:
+        args: -X POST https://httpbin.org/post
 ```
 
 ```
@@ -42,7 +44,8 @@ jobs:
     - uses: actions/checkout@master
     - name: curl
       uses: wei/curl@master
-      args: --upload-file .github/workflows/main.yml https://transfer.sh/main-workflow.yml
+      with:
+        args: --upload-file .github/workflows/main.yml https://transfer.sh/main-workflow.yml
 ```
 
 ### Docker
