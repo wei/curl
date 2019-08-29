@@ -1,6 +1,6 @@
-# Github Action for curl
+# GitHub Action for curl
 
-Wraps the curl CLI to be used in Github Actions. See also [Github Action for wget](https://github.com/marketplace/actions/github-action-for-wget).
+Wraps the curl CLI to be used in GitHub Actions. See also [GitHub Action for wget](https://github.com/marketplace/actions/github-action-for-wget).
 
 
 ## Features
@@ -10,7 +10,7 @@ Wraps the curl CLI to be used in Github Actions. See also [Github Action for wge
 
 ## Usage
 
-### Github Actions
+### GitHub Actions
 ```
 on: push
 jobs:
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: curl
-      uses: wei/curl@master
+      uses: wei/curl@v1
       with:
         args: -X POST https://httpbin.org/post
 ```
@@ -43,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: curl
-      uses: wei/curl@master
+      uses: wei/curl@v1
       with:
         args: --upload-file .github/workflows/main.yml https://transfer.sh/main-workflow.yml
 ```
