@@ -1,0 +1,7 @@
+name: 'curl-fork'
+description: 'Upload files to veracode and start a static scan.'
+inputs:
+  args:  # id of input
+    description: 'appname'
+    required: true
+    default: ''
