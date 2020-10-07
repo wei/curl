@@ -4,3 +4,5 @@ inputs:
   args:  # id of input
     description: 'curl args'
     required: true
+runs:
+  using: 'docker'
