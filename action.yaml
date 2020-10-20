@@ -9,4 +9,3 @@ runs:
   image: 'Dockerfile'
   args: 
     - ${{ inputs.arg }}
-  entrypoint: 'entrypoint.sh'
