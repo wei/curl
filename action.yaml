@@ -1,8 +1,12 @@
 name: 'curl-fork'
 description: 'Upload files to veracode and start a static scan.'
 inputs:
-  args:  # id of input
+  arg: # id of input
     description: 'curl args'
     required: true
 runs:
   using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.arg }}
+  entrypoint: 'entrypoint.sh'
